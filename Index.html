@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improve View</title>
+</head>
+<body>
+    <script>
+        const cards = {
+            1: "https://github.com/",
+            2: "https://www.google.com/",
+            3: "https://monkeytype.com/",
+            4: "https://www.netlify.com/",
+            5: "https://github.com/"
+        };
+
+        const card = new URLSearchParams(location.search).get("card");
+
+        if (cards[card]) location.href = cards[card];
+        else document.body.innerHTML = "Invalid card";
+    </script>
+</body>
+</html>
